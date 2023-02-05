@@ -1,0 +1,65 @@
+q1="""Dob of Aishwarya?
+a.Jan 21
+b.May 21
+c.April 21
+d.Dec 21"""
+
+q2="""who is Aishwarya's fav hero?
+a.Mahesh
+b.Dhanush
+c.Yash
+d.Pavan Kalyan"""
+
+q3="""Fav colour of Aishwarya
+a.Black
+b.white
+c.Blue
+d.Orange"""
+
+q4="""Fav cricketer of Aishwarya?
+a.Captain cool
+b.Kohli
+c.Rohit
+d.Surya kumar yadav"""
+
+q5=""""fav movie of Aishwarya?
+a.3
+b.RRR
+c.18 pages
+d.dhamaka"""
+
+questions={q1:"c",q2:"b",q3:"c",q4:"a",q5:"a"}
+
+name=input("Enter name:")
+print("Hello",name,"Welcome to the quiz")
+score=0
+for i in questions:
+    print(i)
+    flag1=input("Do you want to skip this question(yes/no)")
+    if  flag1=="Yes":
+                continue
+    ans=input("Enter your answer")
+    if ans==questions[i]:
+        print("Wow! you got one point")
+        score=score+1
+        print("Your current score is :",score)
+    else:
+        
+        for j in range(1,3):
+            print("next chance")
+            ans=input("enter answer")
+            if ans==questions[i]:
+                print("Wow! you got one point")
+                score=score+1
+                break
+            else:
+                print("Wrong answer")
+                score=score-1
+                print("Your current score is:",score)
+    flag2=input("Do you want to quit? type(yes/no)")
+    if flag2=="Yes":
+                break
+print("correct answer is:",questions[i])            
+print("Your total score:",score)      
+
+
